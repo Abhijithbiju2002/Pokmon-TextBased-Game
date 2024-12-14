@@ -12,6 +12,7 @@ int main()
 	cin >> playerName;
 
 	cout << "Great Start " << playerName << ", looks like you have understood the main() function properly now!" << endl;
+	cout << "lets begin" << endl;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
