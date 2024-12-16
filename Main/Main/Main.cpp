@@ -6,22 +6,30 @@ using namespace std;
 
 int main()
 {
-	string playerName;
+	cout << "Welcome to the world of Pokémon! I am Professor Oak.\n";
+	cout << "You can choose one of the following Pokémon:\n";
+	cout << "1. Bulbasaur\n2. Charmander\n3. Squirtle\n";
+	cout << "Which Pokémon would you like to choose? Enter the number: ";
 
-	cout << "Enter your Name: ";
-	cin >> playerName;
 
-	cout << "Great Start " << playerName << ", looks like you have understood the main() function properly now!" << endl;
-	cout << "let's begin" << endl;
+	int choice;
+	cin >> choice;
+
+	if (choice == 1) {
+		cout << "You chose Bulbasaur! A wise choice" << endl;
+	}
+	else if (choice == 2) 
+	{
+		cout << "You chose Charmander! A fiery choice." << endl;
+	}
+	else if (choice == 3) {
+		cout << "You chose Squirtle! A cool choice." << endl;
+	}
+	else
+	{
+		cout << "Invalid choice.Please restart the game" << endl;
+	}
+
+
+	return 0;
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
