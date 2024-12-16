@@ -7,9 +7,73 @@ using namespace std;
 enum class PokemonChoice
 {
 	Charmander,
-    Bulbasaur,
-    Squirtle,
+	Bulbasaur,
+	Squirtle,
 	InvalidChoice
+};
+enum class PokemonType {
+	Fire,
+	Grass,
+	Water,
+	Electric
+};
+
+
+class Pokemon
+{
+	
+ public:
+	string name;
+	PokemonType type;
+	int health;
+
+	// Created 2 constructors
+	Pokemon(){
+
+    }
+	Pokemon(string p_name, PokemonType p_type, int p_health) {
+		name = p_name;
+		type = p_type;
+		health = p_health;
+	}
+
+	void Attack() {
+		cout << name << " attacks with a powerful move!" << endl;
+	}
+};
+
+class Player {
+  public:
+		//attributies
+		string name;
+		Pokemon chosenPokemon;
+
+		//methods to choose the pokemon
+		void chosePokemon(int choice) {
+			switch (PokemonChoice(choice))
+			{
+			   case PokemonChoice::Charmander:
+				   chosenPokemon = Pokemon("Charmander", PokemonType::Fire, 100);
+				   break;
+           
+			   case PokemonChoice::Bulbasaur:
+				   chosenPokemon = Pokemon("Bulbasur", PokemonType::Grass, 100);
+				   break;
+
+			   case PokemonChoice::Squirtle:
+				   chosenPokemon = Pokemon("Squirtle", PokemonType::Water, 100);
+				   break;
+
+			   default:
+				   chosenPokemon = Pokemon("Pikachu", PokemonType::Electric, 100);
+				   break;
+		
+			}
+			cout << "Player " << name << " chose " << chosenPokemon.name << endl;
+			
+		}
+
+
 };
 
 int main()
