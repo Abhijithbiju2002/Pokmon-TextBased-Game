@@ -73,15 +73,15 @@ int main()
 	switch (choice) {
 
 	   case 1:
-		chosen_pokemon = "Charmander";
+		chosen_pokemon = Charmander;
 		break;
      
 	   case 2:
-		chosen_pokemon = "Bulbasaur";
+		chosen_pokemon = Bulbasaur;
 		break;
 
 	   case 3:
-		chosen_pokemon = "Squirtle";
+		chosen_pokemon = Squirtle;
 		break;
 
 	   default:
