@@ -9,7 +9,7 @@ using namespace std;
 
 enum class PokemonChoice
 {
-	Charmander,
+	Charmander = 1,
 	Bulbasaur,
 	Squirtle,
 	InvalidChoice
