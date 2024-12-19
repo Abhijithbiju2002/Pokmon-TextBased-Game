@@ -3,6 +3,8 @@
 
 #include <iostream>
 #include<string>
+#include "PokemonType.h"
+#include"PokemonChoice.h"
 using namespace std;
 
 // Function to clear the console
@@ -21,20 +23,6 @@ void waitForEnter() {
 	cin.get();    // Wait for Enter key
 }// cin.get() ---> is function will temporarly pause the program till Press Enter Key
 
-enum class PokemonChoice
-{
-	Charmander = 1,
-	Bulbasaur,
-	Squirtle,
-	InvalidChoice
-};
-enum class PokemonType {
-	Fire,
-	Grass,
-	Water,
-	Electric,
-	Normal // Added for the default constructor
-};
 
 // Pokemon class definition
 class Pokemon
@@ -324,10 +312,10 @@ int main()
 	  // Create Pokemon and Player objects for the game
 	Pokemon charmander("Charmander", PokemonType::Fire, 100); // Using parameterized constructor
 
-    // Continue with the main flow of the game
+	// Continue with the main flow of the game
 	ProfessorOak professor("Professor Oak");
 	Player player("Ash", charmander);
-	
+
 	// Greet the player and offer Pokemon choices 
 	professor.greetPlayer(player);
 	professor.offerPokemonChoices(player);
@@ -337,7 +325,7 @@ int main()
 
 	// Start the main game loop
 	gameLoop(player);
-	
+
 	cout << "file included" << endl;
 
 
@@ -346,4 +334,4 @@ int main()
 
 	return 0;
 
-#include "Header.h"
+}
