@@ -338,9 +338,12 @@ int main()
 	// Start the main game loop
 	gameLoop(player);
 	
-	
+	cout << "file included" << endl;
+
+
 
 
 
 	return 0;
-}
+
+#include "Header.h"
