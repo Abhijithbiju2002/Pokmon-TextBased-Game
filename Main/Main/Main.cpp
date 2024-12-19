@@ -51,6 +51,7 @@ class Pokemon
 		cout << name << " attacks with a powerful move!" << endl;
 	}
 };
+#include "Player.h"
 
 
 // ProfessorOak class definition
