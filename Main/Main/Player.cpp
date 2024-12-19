@@ -1,4 +1,7 @@
 #include "Player.h"
+#include "PokemonType.h"
+#include "PokemonChoice.h"
+#include "Utility.h"
 #include "iostream"
 using namespace std;
 

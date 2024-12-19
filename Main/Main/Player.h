@@ -1,8 +1,5 @@
 #pragma once
 #include <string>
-#include "PokemonType.h"
-#include "PokemonChoice.h"
-#include "Utility.h"
 using namespace std;
 
 class Player {
