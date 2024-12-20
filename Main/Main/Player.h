@@ -3,7 +3,7 @@
 #include "Poke.h"
 using namespace std;
 
-class Pokemon;
+
 
 class Player {
 
