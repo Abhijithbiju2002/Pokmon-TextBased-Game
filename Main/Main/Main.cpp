@@ -1,57 +1,17 @@
 // Main.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
-#include <iostream>
-#include<string>
-#include "PokemonType.h"
+
+#include "Player.h"
+#include "Poke.h"
 #include"PokemonChoice.h"
+#include "PokemonType.h"
 #include "Utility.h"
+#include <iostream>
 #include <limits> // Include this header to use numeric_limits
+
 using namespace std;
 
-
-
-// Pokemon class definition
-class Pokemon
-{
-	
- public:
-	string name;
-	PokemonType type;
-	int health;
-
-	// Created 2 constructors
-	// default constructors
-	Pokemon(){
-		name = "unknown";
-		type = PokemonType::Normal;
-		health = 50;
-		
-    }
-	// Parameterized constructor
-	Pokemon(string p_name, PokemonType p_type, int p_health) {
-		name = p_name;
-		type = p_type;
-		health = p_health;
-		;
-	}
-	// Copy constructor
-	Pokemon(const Pokemon& other) {
-		name = other.name;
-		type = other.type;
-		health = other.health;
-		
-	}
-	//Deconstructor
-	~Pokemon() {
-		// Destructor message removed
-	}
-
-	void Attack() {
-		cout << name << " attacks with a powerful move!" << endl;
-	}
-};
-#include "Player.h"
 
 
 // ProfessorOak class definition
