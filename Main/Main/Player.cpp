@@ -7,16 +7,11 @@
 using namespace std;
 
 Player::Player{
-	//attributies
+	
 	name = "Trainer";
-	chosenPokemon = Pokemon();
+	chosenPokemon = Pokemon(); // Using the default Pokemon constructor
 
-	// Default constructor
-	Player::Player() {
-		name = "Trainer";
-		chosenPokemon = Pokemon(); // Using the default Pokemon constructor
-
-	}
+	
 	// Parameterized constructor
 	Player::Player(std::string p_name, Pokemon p_chosenPokemon) {
 		name = p_name;
@@ -26,7 +21,7 @@ Player::Player{
 
 	//methods to choose the pokemon
 	void Player::choosePokemon(int choice) {
-		switch (PokemonChoice(choice))
+		switch ((PokemonChoice)choice)
 		{
 		case PokemonChoice::Charmander:
 			chosenPokemon = Pokemon("Charmander", PokemonType::Fire, 100);
