@@ -6,26 +6,20 @@
 
 using namespace std;
 
-Player::Player{
+  Player::Player() {
 	//attributies
 	name = "Trainer";
-	chosenPokemon = Pokemon();
-
-	// Default constructor
-	Player::Player() {
-		name = "Trainer";
-		chosenPokemon = Pokemon(); // Using the default Pokemon constructor
-
-	}
+	chosenPokemon = Pokemon();// Using the default Pokemon constructor
+  }
 	// Parameterized constructor
-	Player::Player(std::string p_name, Pokemon p_chosenPokemon) {
+  Player::Player(std::string p_name, Pokemon p_chosenPokemon) {
 		name = p_name;
 		chosenPokemon = p_chosenPokemon;
 
-	}
+  }
 
 	//methods to choose the pokemon
-	void Player::choosePokemon(int choice) {
+  void Player::choosePokemon(int choice) {
 		switch (PokemonChoice(choice))
 		{
 		case PokemonChoice::Charmander:
@@ -49,7 +43,6 @@ Player::Player{
 		cout << "Press Enter to Continue...." << endl;
 		Utility::waitForEnter(); // Wait for user to press Enter before proceeding
 
-	}
+  }
 
 
-};

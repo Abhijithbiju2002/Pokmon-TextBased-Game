@@ -1,8 +1,9 @@
 #pragma once
 #include <string>
+enum class PokemonType;
 using namespace std;
 
-class Pokeman {
+class Pokemon {
 public:
 	string name;
 	PokemonType type;
