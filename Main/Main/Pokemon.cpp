@@ -29,6 +29,38 @@ Pokemon::~Pokemon() {
 	// Destructor logic (if any) goes here
 }
 
-void Pokemon::attack() {
-	cout << name << " attacks with a powerful move!\n";
+void Pokemon::attack(Pokemon &target) {
+	int damage = 10;// Fixed damage for simplicity
+	cout << name << " attacks " << target.name << " for " << damage << " damage!"<<endl;
+	target.takeDamage(damage);// Apply damage to the target Pokémon
+}
+void Pokemon::takeDamage(int damage) {
+	health -= damage; // Reduce HP by the damage amount
+	if (health < 0) {
+		health = 0; // Ensure HP doesn't go below 0
+	}
+}
+bool Pokemon::isFainted()const {
+	return health <= 0;// Return true if HP is 0 or less
+}
+
+void battle(Pokemon& playerPokemon, Pokemon& wildPokemon) {
+
+	cout << "A wild" << wildPokemon.name << " appeared!" << endl;
+
+	while (!playerPokemon.isFainted() && !wildPokemon.isFainted())
+	{
+		playerPokemon.attack(wildPokemon);//Player attacks first
+
+
+		if (!wildPokemon.isFainted()) {
+			wildPokemon.attack(playerPokemon);// Wild Pokémon attacks back
+		}
+	}
+	if (playerPokemon.isFainted()) {
+		cout << playerPokemon.name << " has fainted! You lose the battle.\\n";
+	}
+	else {
+		cout << "You defeated the wild " << wildPokemon.name << "!\\n";
+	}
 }
