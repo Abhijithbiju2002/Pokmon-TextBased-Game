@@ -64,3 +64,6 @@ void battle(Pokemon& playerPokemon, Pokemon& wildPokemon) {
 		cout << "You defeated the wild " << wildPokemon.name << "!\\n";
 	}
 }
+void Pokemon::heal() {
+	health = maxHealth;// Restore health to full
+}

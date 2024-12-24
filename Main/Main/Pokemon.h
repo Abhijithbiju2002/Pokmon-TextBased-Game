@@ -14,7 +14,8 @@ public:
 	Pokemon();
 
 	// Parameterized constructor
-	Pokemon(string p_name, PokemonType p_type, int p_health);
+	Pokemon(string p_name, PokemonType p_type, int p_health,int p_maxHealth)
+		:name(p_name),type(p_type),maxHealth(p_maxHealth),health(p_maxHealth)
 
 	// Copy constructor
 	Pokemon(const Pokemon& other);
@@ -26,5 +27,6 @@ public:
 
 	void takeDamage(int damage);// Method to reduce HP
 	bool isFainted()const;// Method to check if the Pokemon has fainted
+	void heal(); // Method to restore HP to max
 
 };
