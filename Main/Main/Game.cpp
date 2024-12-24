@@ -1,10 +1,10 @@
 #pragma once
-#include "../include/Pokemon/Grass.h"
-#include "../include/Battle/BattleManager.h"
-#include "../include/Character/Player/Player.h"
-#include "../include/Pokemon/PokemonType"
-#include "../include/Utility/Utility.h"
-#include "../include/Battle/WildEncounterManager.h"
+#include "../../include/Pokemon/Grass.h"
+#include "../../include/Battle/BattleManager.h"
+#include "../../include/Character/Player/Player.h"
+#include "../../include/Pokemon/PokemonType"
+#include "../../include/Utility/Utility.h"
+#include "../../include/Battle/WildEncounterManager.h"
 #include <iostream>
 using namespace std;
 
