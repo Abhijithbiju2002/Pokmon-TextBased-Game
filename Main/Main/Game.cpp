@@ -3,6 +3,7 @@
 #include "PokemonType.h"
 #include "Utility.h"
 #include "WildEncounterManager.h"
+#include "BattleManager.h"
 #include <iostream>
 using namespace std;
 
@@ -18,6 +19,7 @@ Game::Game() {
 void Game::gameLoop(Player& player) {
 
     int choice;
+    BattleManager battleManager;
     bool keepPlaying = true;
 
     while (keepPlaying) {
@@ -41,35 +43,19 @@ void Game::gameLoop(Player& player) {
         case 1: {
             // Create a scope within case 1
             WildEncounterManager encounterManager;
-            Pokemon encounteredPokemon =
+            Pokemon wildPokemon =
                 encounterManager.getRandomPokemonFromGrass(forestGrass);
-            cout << "A wild " << encounteredPokemon.name << " appeared!\n";
+            battleManager.startBattle(player, wildPokemon);
             break;
         }
         case 2: {
-            cout << "You head to the PokeCenter, but Nurse Joy is out on a coffee "
-                "break. Guess your Pokémon will have to tough it out for now!\n";
-            break;
-        }
-        case 3: {
-            cout << "You march up to the Gym, but it's closed for renovations. Seems "
-                "like even Gym Leaders need a break!\n";
-            break;
-        }
-        case 4: {
-            cout << "You boldly step towards the Pokémon League... but the "
-                "gatekeeper laughs and says, 'Maybe next time, champ!'\n";
+            cout << "You head to the PokeCenter.\\n";
+            player.chosenPokemon.heal(); // Heal the player's Pokémon
+            std::cout << player.chosenPokemon.name << "'s health is fully restored!\\n";
             break;
         }
         case 5: {
-            cout << "You try to quit, but Professor Oak's voice echoes: 'There's no "
-                "quitting in Pokémon training!'\n";
-            cout << "Are you sure you want to quit? (y/n): ";
-            char quitChoice;
-            cin >> quitChoice;
-            if (quitChoice == 'y' || quitChoice == 'Y') {
-                keepPlaying = false;
-            }
+            keepPlaying = false;
             break;
         }
         default: {
