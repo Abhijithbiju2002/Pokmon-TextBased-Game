@@ -1,3 +1,4 @@
+#pragma once
 #include "Player.h"
 #include "PokemonChoice.h"
 #include "PokemonType.h"
@@ -23,19 +24,19 @@ using namespace std;
 		switch (PokemonChoice(choice))
 		{
 		case PokemonChoice::Charmander:
-			chosenPokemon = Pokemon("Charmander", PokemonType::Fire, 100);
+			chosenPokemon = Pokemon("Charmander", PokemonType::Fire, 100,10);
 			break;
 
 		case PokemonChoice::Bulbasaur:
-			chosenPokemon = Pokemon("Bulbasur", PokemonType::Grass, 100);
+			chosenPokemon = Pokemon("Bulbasur", PokemonType::Grass, 100,8);
 			break;
 
 		case PokemonChoice::Squirtle:
-			chosenPokemon = Pokemon("Squirtle", PokemonType::Water, 100);
+			chosenPokemon = Pokemon("Squirtle", PokemonType::Water, 100,9);
 			break;
 
 		default:
-			chosenPokemon = Pokemon("Pikachu", PokemonType::Electric, 100);
+			chosenPokemon = Pokemon("Pikachu", PokemonType::Electric, 100,12);
 			break;
 
 		}
