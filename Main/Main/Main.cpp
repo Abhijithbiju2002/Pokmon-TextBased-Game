@@ -3,7 +3,7 @@
 
 
 #include "Game.h"
-#include "Player.h"
+#include "../include/Character/Player/Player.h"
 #include"PokemonChoice.h"
 #include "PokemonType.h"
 #include "ProfessorOak.h"
