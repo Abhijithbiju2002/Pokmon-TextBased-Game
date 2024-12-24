@@ -1,5 +1,6 @@
 #pragma once
 
+namespace N_Utility;
 class Utility {
 public:
 	static void clearConsole();

@@ -1,6 +1,8 @@
 #pragma once
 #include "Pokemon.h"
 
+
+namespace N_Battle;
 struct BattleState {
     Pokemon* playerPokemon;  // Pointer to the player's Pokémon
     Pokemon* wildPokemon;    // Pointer to the wild Pokémon

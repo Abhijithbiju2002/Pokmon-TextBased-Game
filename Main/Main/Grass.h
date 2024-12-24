@@ -4,7 +4,7 @@
 using namespace std;
 
 
-
+namespace N_Pokemon;
 class Pokemon;
 
 struct Grass {

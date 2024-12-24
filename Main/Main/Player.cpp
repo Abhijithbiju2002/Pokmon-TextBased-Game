@@ -7,6 +7,8 @@
 
 using namespace std;
 
+namespace N_Player;
+
   Player::Player() {
 	//attributies
 	name = "Trainer";

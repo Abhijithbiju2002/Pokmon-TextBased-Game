@@ -1,6 +1,8 @@
 #pragma once
 #include "../include/Pokemon/Grass.h"
 
+
+namespace N_Main;
 class Player;
 
 class Game {

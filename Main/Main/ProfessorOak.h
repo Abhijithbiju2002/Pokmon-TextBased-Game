@@ -2,6 +2,7 @@
 #include <iostream>
 using namespace std;
 
+namespace N_Character;
 class Player;
 
 class ProfessorOak {

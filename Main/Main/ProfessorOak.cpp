@@ -4,6 +4,8 @@
 #include <iostream>
 using namespace std;
 
+namespace N_Character;
+
 ProfessorOak::ProfessorOak(string p_name) { name = p_name; }
 
 void ProfessorOak::greetPlayer(Player& player) {

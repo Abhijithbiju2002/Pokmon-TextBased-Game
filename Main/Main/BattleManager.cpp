@@ -5,6 +5,7 @@
 #include <iostream>
 using namespace std;
 
+namespace N_Battle;
 void BattleManager::startBattle(Player& player, Pokemon& wildPokemon) {
     battleState.playerPokemon = player.chosenPokemon;
     battleState.wildPokemon = wildPokemon;

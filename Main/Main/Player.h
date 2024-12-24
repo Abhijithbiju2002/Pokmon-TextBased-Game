@@ -4,6 +4,7 @@
 using namespace std;
 
 
+namespace N_Player;
 
 class Player {
 

@@ -4,6 +4,7 @@
 #include <iostream>
 using namespace std;
 
+namespace N_Pokemon;
 // Default constructor
 Pokemon::Pokemon() {
 	name = "Unknown";

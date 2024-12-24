@@ -8,6 +8,8 @@
 #include <iostream>
 using namespace std;
 
+namespace N_Main;
+
 Game::Game() {
     // Create a sample grass environment with actual Pokemon objects
     forestGrass = { "Forest",
