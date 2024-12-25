@@ -1,5 +1,5 @@
 #pragma once
-#include "../Pokemon.h"
+#include "../../include/Pokemon/Pokemon.hpp"
 #include "../../include/Pokemon/PokemonType"
 #include <iostream>
 using namespace std;
@@ -31,6 +31,14 @@ Pokemon::Pokemon(const Pokemon& other) {
 	maxHealth = other.maxHealth;
 	attackPower = other.attackPower;
 }
+// Reduce HP by the damage amount
+void Pokemon::takeDamage(int damage) {
+	health -= damage;
+	if (health < 0) {
+		health = 0;
+	}
+}
+
 // Check if the Pokemon has fainted
 bool Pokemon::isFainted()const {
 	return health <= 0;// Return true if HP is 0 or less
