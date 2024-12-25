@@ -1,8 +1,8 @@
-#include "../../../include/Character/Player/Player.hpp"
-#include "../../../include/Pokemon/PokemonChoice.hpp"
-#include "../../../include/Pokemon/PokemonType.hpp"
-#include "../../../include/Pokemon/Pokemons/Pikachu.hpp"
-#include "../../../include/Utility/Utility.hpp"
+#include "../../../include/Character/Player/Player.h"
+#include "../../../include/Pokemon/PokemonChoice.h"
+#include "../../../include/Pokemon/PokemonType.h"
+#include "../../../include/Pokemon/Pokemons/Pikachu.h"
+#include "../../../include/Utility/Utility.h"
 #include "iostream"
 
 namespace N_Character
@@ -15,10 +15,10 @@ namespace N_Character
 
         Player::Player() {
             name = "Trainer";
-            chosenPokemon = Pokemon(); // Using the default Pokemon constructor
+            chosenPokemon = new Pokemon(); // Using the default Pokemon constructor
         }
 
-        Player::Player(std::string p_name, Pokemon p_chosenPokemon) {
+        Player::Player(std::string p_name, Pokemon* p_chosenPokemon) {
             name = p_name;
             chosenPokemon = p_chosenPokemon;
         }

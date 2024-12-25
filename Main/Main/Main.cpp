@@ -1,12 +1,12 @@
 // Main.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
-#include "Main/Game.hpp"
-#include "Character/Player/Player.hpp"
-#include "Pokemon/PokemonChoice.hpp"
-#include "Pokemon/PokemonType.hpp"
-#include "Character/ProfessorOak.hpp"
-#include "Utility/Utility.hpp"
+#include "Main/Game.h"
+#include "Character/Player/Player.h"
+#include "Pokemon/PokemonChoice.h"
+#include "Pokemon/PokemonType.h"
+#include "Character/ProfessorOak.h"
+#include "Utility/Utility.h"
 #include <iostream>
 #include <limits> // Include this header to use std::numeric_limits
 #include <string>

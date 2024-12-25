@@ -1,6 +1,6 @@
 #pragma once
-#include "../Character/Player/Player.hpp"
-#include "../Pokemon/Grass.hpp"
+#include "../Character/Player/Player.h"
+#include "../Pokemon/Grass.h"
 
 // class Player;
 namespace N_Main
@@ -13,7 +13,7 @@ namespace N_Main
         Grass forestGrass;
     public:
         Game();
-        void gameLoop(Player& player);
-        void visitPokeCenter(Player& player);
+        void gameLoop(Player* player);
+        void visitPokeCenter(Player* player);
     };
 }
