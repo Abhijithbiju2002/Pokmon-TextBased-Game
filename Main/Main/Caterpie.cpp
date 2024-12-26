@@ -14,8 +14,16 @@ namespace N_Pokemon {
             cout << name << " uses Bug Bite on " << target->name << "!\n";
             target->takeDamage(20);
         }
-        void Caterpie::attack(Pokemon* target){
-             bugBite(target);
-}
+        void Caterpie::attack(Move selectedMove, Pokemon* target) {
+            Pokemon::attack(selectedMove, target);
+
+            if (selectedMove.name == "STICKY WEB")
+            {
+                // Reduce the target's next attack damage (for simplicity, reducing by a fixed value)
+                int reducedDamage = 5;
+                target->reduceAttackPower(reducedDamage);
+                std::cout << target->name << "'s next attack will be reduced by " << reducedDamage << " damage!\n";
+            }
+        }
     }
 }

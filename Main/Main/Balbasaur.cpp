@@ -6,11 +6,15 @@ namespace N_Pokemon {
     namespace N_Pokemons {
         using namespace std;
 
-        Balbasaur::Balbasaur() : Pokemon("Charmander", PokemonType::FIRE, 100, 35) {}
+        Bulbasaur::Bulbasaur()
+            : Pokemon("Bulbasaur", PokemonType::Grass, 110, {
+                Move("VINE WHIP", 25),
+                Move("TACKLE", 10)
+                }) {
+        }
 
-        void Balbasaur::vineWhip(Pokemon& target) {
-            cout << name << " uses vine Whip on " << target.name << "!\n";
-            target.takeDamage(20);
+        void Bulbasaur::attack(Pokemon* target) {
+            selectAndUseMove(target);
         }
     }
 }
