@@ -10,6 +10,7 @@ namespace N_Pokemon {
 
 		public:
 			Caterpie();
+			void attack(Pokemon* target) override;
 		};
 	}
 }
