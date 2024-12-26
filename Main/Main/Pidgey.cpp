@@ -1,18 +1,24 @@
 #include "../../../include/Pokemon/Pokemons/Pidgey.h"
 #include "../../../include/Pokemon/PokemonType.h"
+#include "../../../include/Pokemon/Move.h"
 #include <iostream>
+
+#include "../../../include/Battle/BattleManager.h"
+#include "../../../include/Utility/Utility.h"
 
 namespace N_Pokemon {
     namespace N_Pokemons {
         using namespace std;
 
-        Pidgey::Pidgey() : Pokemon("Pidgey", PokemonType::NORMAL, 100, 35) {}
-
-        void Pidgey::wingAttack(Pokemon* target) {
-            cout << name << " uses Wing Attack on " << target->name << "!\n";
-            target->takeDamage(20);
+        Pidgey::Pidgey()
+            : Pokemon("Pidgey", PokemonType::FLYING, 80, {
+                Move("GUST", 15),
+                Move("TACKLE", 10)
+                }) {
         }
-        void Pidgey::attack(Move selectedMove, Pokemon* target) {
+
+        void Pidgey::attack(Move selectedMove, Pokemon* target)
+        {
             Pokemon::attack(selectedMove, target);
 
             if (selectedMove.name == "GUST")

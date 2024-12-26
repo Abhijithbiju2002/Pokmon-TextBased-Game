@@ -1,20 +1,23 @@
 #include "../../../include/Pokemon/Pokemons/Caterpie.h"
 #include "../../../include/Pokemon/PokemonType.h"
+#include "../../../include/Pokemon/Move.h"
 #include <iostream>
 
 namespace N_Pokemon {
-
     namespace N_Pokemons {
 
         using namespace std;
 
-        Caterpie::Caterpie() : Pokemon("Caterpie", PokemonType::BUG, 100, 10) {}
-
-        void Caterpie::bugBite(Pokemon* target) {
-            cout << name << " uses Bug Bite on " << target->name << "!\n";
-            target->takeDamage(20);
+        Caterpie::Caterpie()
+            : Pokemon("Caterpie", PokemonType::BUG, 75, {
+                Move("TACKLE", 10),
+                Move("STRING SHOT", 5),
+                Move("STICKY WEB", 10)
+                }) {
         }
-        void Caterpie::attack(Move selectedMove, Pokemon* target) {
+
+        void Caterpie::attack(Move selectedMove, Pokemon* target)
+        {
             Pokemon::attack(selectedMove, target);
 
             if (selectedMove.name == "STICKY WEB")
@@ -25,5 +28,6 @@ namespace N_Pokemon {
                 std::cout << target->name << "'s next attack will be reduced by " << reducedDamage << " damage!\n";
             }
         }
+
     }
 }

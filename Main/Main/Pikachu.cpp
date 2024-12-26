@@ -1,5 +1,6 @@
 #include "../../../include/Pokemon/Pokemons/Pikachu.h"
 #include "../../../include/Pokemon/PokemonType.h"
+#include "../../../include/Pokemon/Move.h"
 #include <iostream>
 
 namespace N_Pokemon {
@@ -7,13 +8,16 @@ namespace N_Pokemon {
 
         using namespace std;
 
-        Pikachu::Pikachu() : Pokemon("Pikachu", PokemonType::ELECTRIC, 100, 20) {}
-
-        void Pikachu::thunderShock(Pokemon* target) {
-            cout << name << " uses Thunder Shock on " << target->name << "!\n";
-            target->takeDamage(20);
+        Pikachu::Pikachu()
+            : Pokemon("Pikachu", PokemonType::ELECTRIC, 100, {
+                Move("THUNDER SHOCK", 20),
+                Move("QUICK ATTACK", 10),
+                Move("THUNDER BOLT", 80)
+                }) {
         }
-        void Pikachu::attack(Move selectedMove, Pokemon* target) {
+
+        void Pikachu::attack(Move selectedMove, Pokemon* target)
+        {
             if (selectedMove.name == "THUNDER BOLT")
             {
                 // 80% chance to hit

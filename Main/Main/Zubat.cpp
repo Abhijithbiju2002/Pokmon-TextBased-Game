@@ -1,5 +1,6 @@
 #include "../../../include/Pokemon/Pokemons/Zubat.h"
 #include "../../../include/Pokemon/PokemonType.h"
+#include "../../../include/Pokemon/Move.h"
 #include <iostream>
 
 namespace N_Pokemon {
@@ -7,13 +8,15 @@ namespace N_Pokemon {
 
         using namespace std;
 
-        Zubat::Zubat() : Pokemon("Zubat", PokemonType::POISON, 100, 20) {}
-
-        void Zubat::supersonic(Pokemon* target) {
-            cout << name << " uses Supersonic on " << target->name << "!\n";
-            target->takeDamage(20);
+        Zubat::Zubat()
+            : Pokemon("Zubat", PokemonType::POISON, 85, {
+                Move("BITE", 18),
+                Move("LEECH LIFE", 10)
+                }) {
         }
-        void Zubat::attack(Move selectedMove, Pokemon* target) {
+
+        void Zubat::attack(Move selectedMove, Pokemon* target)
+        {
             // Call the base class method from child class.
             Pokemon::attack(selectedMove, target);
 

@@ -1,18 +1,22 @@
 #include "../../../include/Pokemon/Pokemons/Squirtle.h"
 #include "../../../include/Pokemon/PokemonType.h"
+#include "../../../include/Pokemon/Move.h"
 #include <iostream>
 
 namespace N_Pokemon {
     namespace N_Pokemons {
         using namespace std;
 
-        Squirtle::Squirtle() : Pokemon("Charmander", PokemonType::FIRE, 100, 35) {}
-
-        void Squirtle::waterSpalsh(Pokemon& target) {
-            cout << name << " uses Water splash on " << target.name << "!\n";
-            target.takeDamage(20);
+        Squirtle::Squirtle()
+            : Pokemon("Squirtle", PokemonType::WATER, 105, {
+                Move("WATER GUN", 20),
+                Move("TACKLE", 10),
+                Move("RAPID SPIN", 5)
+                }) {
         }
-        void Squirtle::attack(Move selectedMove, Pokemon* target) {
+
+        void Squirtle::attack(Move selectedMove, Pokemon* target)
+        {
             Pokemon::attack(selectedMove, target);
 
             if (selectedMove.name == "RAPID SPIN")
