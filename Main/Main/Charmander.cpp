@@ -1,16 +1,16 @@
-#include "../../../include/Pokemon/Pokemons/Charmander.h"
-#include "../../../include/Pokemon/PokemonType.h"
-#include "../../../include/Pokemon/Move.h"
+#include "Charmander.h"
+#include "PokemonType.h"
+#include "Move.h"
 #include <iostream>
 
-#include "../../../include/Utility/Utility.hpp"
+#include "Utility.h"
 
 namespace N_Pokemon {
     namespace N_Pokemons {
         using namespace std;
 
         Charmander::Charmander()
-            : Pokemon("Charmander", PokemonType::FIRE, 95, {
+            : Pokemon("Charmander", PokemonType::Fire, 95, {
                 Move("EMBER", 20),
                 Move("SCRATCH", 15),
                 Move("BLAZING CHARGE", 70)

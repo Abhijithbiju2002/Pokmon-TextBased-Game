@@ -1,11 +1,11 @@
-#include "../../include/Main/Game.h"
-#include "../../include/Battle/BattleManager.h"
-#include "../../include/Battle/WildEncounterManager.h"
-#include "../../include/Character/Player/Player.h"
-#include "../../include/Pokemon/Pokemons/Caterpie.h"
-#include "../../include/Pokemon/Pokemons/Pidgey.h"
-#include "../../include/Pokemon/Pokemons/Zubat.h"
-#include "../../include/Utility/Utility.h"
+#include "Game.h"
+#include "BattleManager.h"
+#include "WildEncounterManager.h"
+#include "Player.h"
+#include "Caterpie.h"
+#include "Pidgey.h"
+#include "Zubat.h"
+#include "Utility.h"
 #include <iostream>
 
 namespace N_Main

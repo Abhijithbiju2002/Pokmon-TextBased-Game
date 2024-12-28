@@ -1,6 +1,6 @@
-#include "../../../include/Pokemon/Pokemons/Caterpie.h"
-#include "../../../include/Pokemon/PokemonType.h"
-#include "../../../include/Pokemon/Move.h"
+#include "Caterpie.h"
+#include "PokemonType.h"
+#include "Move.h"
 #include <iostream>
 
 namespace N_Pokemon {

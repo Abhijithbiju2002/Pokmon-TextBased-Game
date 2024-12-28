@@ -1,6 +1,6 @@
-#include "../../include/Battle/BattleManager.h"
-#include "../../include/Character/Player/Player.h"
-#include "../../include/Utility/Utility.h"
+#include "BattleManager.h"
+#include "Player.h"
+#include "Utility.h"
 #include <iostream>
 
 namespace N_Battle
