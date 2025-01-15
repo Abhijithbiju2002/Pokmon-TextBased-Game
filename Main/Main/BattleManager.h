@@ -1,6 +1,6 @@
 #pragma once
-#include "../Battle/BattleState.h"
-#include "../Character/Player/Player.h"
+#include "BattleState.h"
+#include "Player.h"
 
 namespace N_Battle
 {
@@ -11,8 +11,9 @@ namespace N_Battle
     class BattleManager {
     public:
         void startBattle(Player* player, N_Pokemon::Pokemon* wildPokemon);
+        static void stopBattle();
     private:
-        BattleState battleState;
+        static BattleState battleState;
 
         void battle();
         void handleBattleOutcome();

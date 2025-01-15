@@ -1,13 +1,12 @@
-#include "../../include/Main/Game.h"
-#include "../../include/Battle/BattleManager.h"
-#include "../../include/Battle/WildEncounterManager.h"
-#include "../../include/Character/Player/Player.h"
-#include "../../include/Pokemon/Pokemons/Caterpie.h"
-#include "../../include/Pokemon/Pokemons/Pidgey.h"
-#include "../../include/Pokemon/Pokemons/Zubat.h"
-#include "../../include/Utility/Utility.h"
+#include "Game.h"
+#include "BattleManager.h"
+#include "WildEncounterManager.h"
+#include "Player.h"
+#include "Caterpie.h"
+#include "Pidgey.h"
+#include "Zubat.h"
+#include "Utility.h"
 #include <iostream>
-
 
 namespace N_Main
 {
@@ -29,7 +28,6 @@ namespace N_Main
         bool keepPlaying = true;
         BattleManager* battleManager = new BattleManager();
         WildEncounterManager* encounterManager = new WildEncounterManager();
-        N_Pokemon::Pokemon* wildPokemon = new N_Pokemon::Pokemon();
 
         while (keepPlaying) {
             // Clear console before showing options
@@ -92,7 +90,6 @@ namespace N_Main
 
         cout << "Goodbye, " << player->name << "! Thanks for playing!\n";
 
-        delete(wildPokemon);
         delete(encounterManager);
         delete(battleManager);
     }
@@ -102,12 +99,17 @@ namespace N_Main
             std::cout << "Your Pokémon is already at full health!\n";
         }
         else {
-            cout << "You head to the PokeCenter.\n";
-            cout << "Healing your Pokémon...\n";
+            std::cout << "You head to the PokeCenter.\n";
+            std::cout << "Healing your Pokémon...\n";
             Utility::waitForEnter(); // Simulate a short pause for the
             // healing process
             player->chosenPokemon->heal();        // Heal the player's Pokémon
-            cout << player->chosenPokemon->name << "'s health is fully restored!\n";
+            std::cout << player->chosenPokemon->name << "'s health is fully restored!\n";
         }
+    }
+
+    Game::~Game()
+    {
+        delete(wildPokemon);
     }
 }

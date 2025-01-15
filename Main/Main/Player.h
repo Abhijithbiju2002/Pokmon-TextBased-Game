@@ -1,6 +1,6 @@
 #pragma once
 #include <string>
-#include "../../Pokemon/Pokemon.h"
+#include "Pokemon.h"
 
 namespace N_Character
 {
@@ -15,7 +15,7 @@ namespace N_Character
             Pokemon* chosenPokemon;
 
             Player(); // Default constructor
-            Player(string* p_name,Pokemon* p_chosenPokemon); // Parameterized constructor
+            Player(string p_name); // Parameterized constructor
 
             void choosePokemon(int choice); // Method to choose a Pokemon
         };

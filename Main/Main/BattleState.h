@@ -1,5 +1,5 @@
 #pragma once
-#include "../Pokemon/Pokemon.h"
+#include "Pokemon.h"
 
 namespace N_Battle
 {

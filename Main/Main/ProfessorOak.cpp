@@ -1,6 +1,6 @@
-#include "../../include/Character/ProfessorOak.h"
-#include "../../include/Utility//Utility.h"
-#include "../../include/Character/Player/Player.h"
+#include "ProfessorOak.h"
+#include "Utility.h"
+#include "Player.h"
 #include <iostream>
 
 namespace N_Character

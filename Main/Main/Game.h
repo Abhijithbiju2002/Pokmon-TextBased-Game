@@ -1,6 +1,6 @@
 #pragma once
-#include "../Character/Player/Player.h"
-#include "../Pokemon/Grass.h"
+#include "Player.h"
+#include "Grass.h"
 
 // class Player;
 namespace N_Main
@@ -11,8 +11,11 @@ namespace N_Main
     class Game {
     private:
         Grass forestGrass;
+        Pokemon* wildPokemon;
+
     public:
         Game();
+        ~Game();
         void gameLoop(Player* player);
         void visitPokeCenter(Player* player);
     };
