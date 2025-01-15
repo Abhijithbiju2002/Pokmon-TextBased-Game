@@ -1,27 +1,35 @@
 // Main.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
+#include "Game.h"
+#include "Player.h"
+#include "ProfessorOak.h"
 #include <iostream>
-using namespace std;
+#include <limits> // Include this header to use std::numeric_limits
 
-int main()
-{
-	string playerName;
+using namespace N_Character;
+using namespace N_Player;
 
-	cout << "Enter your Name: ";
-	cin >> playerName;
+int main() {
 
-	cout << "Great Start " << playerName << ", looks like you have understood the main() function properly now!" << endl;
-	cout << "let's begin" << endl;
+    // Continue with the main flow of the game
+    ProfessorOak* professor = new ProfessorOak("Professor Oak");
+    N_Player::Player* player = new N_Player::Player();
+
+    // Greet the player and offer Pokemon choices
+    professor->greetPlayer(player);
+    professor->offerPokemonChoices(player);
+
+    // Explain the main quest
+    professor->explainMainQuest(player);
+
+    // Start the main game loop
+    N_Main::Game* game = new N_Main::Game();
+    game->gameLoop(player);
+
+    delete(professor);
+    delete(player);
+    delete(game);
+
+    return 0;
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
