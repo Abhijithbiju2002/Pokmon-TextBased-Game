@@ -1,11 +1,11 @@
 #include "iostream"
-#include "../../../include/Character/Player/Player.h"
-#include "../../../include/Pokemon/PokemonChoice.h"
-#include "../../../include/Pokemon/Pokemons/Pikachu.h"
-#include "../../../include/Utility/Utility.h"
-#include "../../../include/Pokemon/Pokemons/Bulbasaur.h"
-#include "../../../include/Pokemon/Pokemons/Charmander.h"
-#include "../../../include/Pokemon/Pokemons/Squirtle.h"
+#include "Player.h"
+#include "PokemonChoice.h"
+#include "Pikachu.h"
+#include "Utility.h"
+#include "Bulbasaur"
+#include "Charmander.h"
+#include "Squirtle.h"
 
 namespace N_Character
 {
@@ -25,13 +25,13 @@ namespace N_Character
 
         void Player::choosePokemon(int choice) {
             switch ((PokemonChoice)choice) {
-            case PokemonChoice::CHARMANDER:
+            case PokemonChoice::Charmander:
                 chosenPokemon = new Charmander();
                 break;
-            case PokemonChoice::BULBASAUR:
+            case PokemonChoice::Bulbasaur:
                 chosenPokemon = new Bulbasaur();
                 break;
-            case PokemonChoice::SQUIRTLE:
+            case PokemonChoice::Squirtle:
                 chosenPokemon = new Squirtle();
                 break;
             default:

@@ -1,6 +1,6 @@
 #pragma once
-#include "../Character/Player/Player.h"
-#include "../Pokemon/Grass.h"
+#include "Player.h"
+#include "Grass.h"
 
 // class Player;
 namespace N_Main

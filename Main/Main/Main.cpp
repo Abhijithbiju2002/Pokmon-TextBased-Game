@@ -1,9 +1,9 @@
 // Main.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
-#include "include/Main/Game.h"
-#include "include/Character/Player/Player.h"
-#include "include/Character/ProfessorOak.h"
+#include "Game.h"
+#include "Player.h"
+#include "ProfessorOak.h"
 #include <iostream>
 #include <limits> // Include this header to use std::numeric_limits
 

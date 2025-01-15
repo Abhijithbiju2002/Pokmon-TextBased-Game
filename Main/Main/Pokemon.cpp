@@ -1,7 +1,7 @@
 #include <iostream>
-#include "../../include/Pokemon/Pokemon.h"
-#include "../../include/Pokemon/PokemonType.h"
-#include "../../include/Utility/Utility.h"
+#include "Pokemon.h"
+#include "PokemonType.h"
+#include "Utility.h"
 using namespace std;
 
 namespace N_Pokemon {
@@ -9,7 +9,7 @@ namespace N_Pokemon {
     // Default constructor
     Pokemon::Pokemon() {
         name = "Unknown";
-        type = PokemonType::NORMAL;
+        type = PokemonType::Normal;
         health = 50;
         maxHealth = 50;
     }

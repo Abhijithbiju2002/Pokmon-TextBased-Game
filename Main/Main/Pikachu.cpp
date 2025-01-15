@@ -1,6 +1,6 @@
-#include "../../../include/Pokemon/Pokemons/Pikachu.h"
-#include "../../../include/Pokemon/PokemonType.h"
-#include "../../../include/Pokemon/Move.h"
+#include "Pikachu.h"
+#include "PokemonType.h"
+#include "Move.h"
 #include <iostream>
 
 namespace N_Pokemon {
@@ -9,7 +9,7 @@ namespace N_Pokemon {
         using namespace std;
 
         Pikachu::Pikachu()
-            : Pokemon("Pikachu", PokemonType::ELECTRIC, 100, {
+            : Pokemon("Pikachu", PokemonType::Electric, 100, {
                 Move("THUNDER SHOCK", 20),
                 Move("QUICK ATTACK", 10),
                 Move("THUNDER BOLT", 80)

@@ -1,10 +1,10 @@
-#include "../../../include/Pokemon/Pokemons/Pidgey.h"
-#include "../../../include/Pokemon/PokemonType.h"
-#include "../../../include/Pokemon/Move.h"
+#include "Pidgey.h"
+#include "PokemonType.h"
+#include "Move.h"
 #include <iostream>
 
-#include "../../../include/Battle/BattleManager.h"
-#include "../../../include/Utility/Utility.h"
+#include "BattleManager.h"
+#include "Utility.h"
 
 namespace N_Pokemon {
     namespace N_Pokemons {
