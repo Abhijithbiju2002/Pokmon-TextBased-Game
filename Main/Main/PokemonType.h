@@ -8,6 +8,7 @@ namespace N_Pokemon {
 		Electric,
 		Normal,// Added for the default constructor
 		POISON,
-		BUG
+		BUG,
+		FLYING
 	};
 }
