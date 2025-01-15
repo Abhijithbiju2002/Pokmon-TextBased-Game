@@ -1,15 +1,22 @@
 #pragma once
 #include "BattleState.h"
-class Player;
-class Pokemon;
+#include "Player.h"
 
-class BattleManager {
-public:
-    void startBattle(Player& player, Pokemon& wildPokemon);
-private:
-    BattleState battleState;
+namespace N_Battle
+{
+    class Pokemon;
+    using namespace N_Character::N_Player;
+    using namespace N_Pokemon;
 
-    void battle();
-    void handleBattleOutcome();
-    void updateBattleState();
-};
+    class BattleManager {
+    public:
+        void startBattle(Player* player, N_Pokemon::Pokemon* wildPokemon);
+        static void stopBattle();
+    private:
+        static BattleState battleState;
+
+        void battle();
+        void handleBattleOutcome();
+        void updateBattleState();
+    };
+}
